@@ -1,15 +1,59 @@
 <%-include('header') %>
+    <style>
+        table {
+            margin: auto;
+            border-collapse: separate;
+            width: 60%;
+            border: 2px solid #3498db;
 
-<div class="text-center center-div mt-5 "id="login">
-<div-container class="w-25 border py-5 mt-5">
-<h3>welcome  to the homepage</h3>
-<h5><%=user%></h5>
-<a href ="/router/logout">Logout</a>
-</div>
-</div>
+        }
+
+        th,
+        td {
+            border: 1px solid #3498db;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+    </style>
+
+
+    <h1 style="text-align: center; margin-top: 30px;"><strong> welcome to the homepage</strong></h1>
+    <div class="text-center center-div mt-0 " id="login">
+        <h1 style="margin-top: -100px;">Products listing</h1>
+        <div-container class="w-25 border py-5 mt-1">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% items.forEach(item=> { %>
+                        <tr>
+                            <td>
+                                <%= item.products %>
+                            </td>
+                            <td>
+                                <%= item.numbers %>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+
+
+
+            <div class="logout" style="    margin-top: -454px;">
+                <a href="/router/logout" class="button" >Logout</a>
+            </div>
+    </div>
+    </div>
 
 
 
 
-<%-include('footer') %>
-
+    <%-include('footer') %>
