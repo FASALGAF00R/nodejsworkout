@@ -28,12 +28,14 @@ app.use('/static',express.static(path.join(__dirname,"public")))
 app.use( "/assests",express.static(path.join(__dirname,"public/assests")))
 
 
+app.use('/router',router);
+
+
 app.get('/',(req,res)=>{
     res.render('../loginsystem/views/base');
 })
 
 
-app.use('/router',router);
 
 app.listen(port, ()=>{console.log("listening to the server 3000")})
 
