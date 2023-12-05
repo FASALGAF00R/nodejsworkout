@@ -1,4 +1,4 @@
-const express = require('express');const { log } = require('util');
+const express = require('express');
 var router = express.Router();
 
 const credential = {
@@ -77,6 +77,11 @@ router.get('/logout', (req, res) => {
     })
 })
 
+router.get('/cards',(req,res)=>{
+
+    res.render('../loginsystem/views/cards')
+
+})
 
 
 
