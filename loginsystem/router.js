@@ -20,13 +20,14 @@ const items = [
 
 ]
 
+
 // params url 
-// router.post('/ll/:id',(req,res)=>{
-//     const userID=parseInt(req.params.id)
-// const filteruserdata=items.filter(data=> data.id===userID)
-// console.log(filteruserdata,"filter");
-//     res.json( filteruserdata)
-// })
+router.post('/ll/:id',(req,res)=>{
+    const userID=parseInt(req.params.id)
+const filteruserdata=items.filter(data=> data.id===userID)
+console.log(filteruserdata,"filter");
+    res.json( filteruserdata)
+})
 
 
 
